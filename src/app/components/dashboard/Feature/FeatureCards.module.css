@@ -1,0 +1,115 @@
+.title {
+    font-size: 48px;
+    font-weight: 400;
+    max-width: 687px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #9C9C9C;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .cardWrapper {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .card {
+    width: 338px;
+    height: 280px;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Gradient backgrounds */
+  .card1 {
+    background: linear-gradient(135deg, #696eff55, #f8acff47,#fec1514a);
+  }
+  
+  .card2 {
+    background: linear-gradient(135deg, #696eff55, #f8acff47,#fec1514a);
+  }
+  
+  .card3 {
+    background: linear-gradient(135deg, #696eff55, #f8acff47,#fec1514a);
+  }
+  
+  .textBlock {
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .cardTitle {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .cardDesc {
+    font-size: 16px;
+    color: #9C9C9C;
+    font-weight: 400;
+
+    line-height: 1.5;
+  }
+  .img{
+    width: 350px;
+    height: 350px;
+
+  }
+    
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .title {
+        font-size: 28.35px;
+        font-weight: 400;
+        max-width: 487px;
+        margin: 0px auto;
+        
+        margin-bottom: 10px;
+      }
+      
+      .subtitle {
+        font-size: 16px;
+        color: #9C9C9C;
+        font-weight: 400;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .card {
+        width: 211px;
+        height: 165px;
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cardTitle {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #000;
+      }
+      
+      .cardDesc {
+        font-size: 9px;
+        color: #9C9C9C;
+        font-weight: 400;
+    
+        line-height: 1.5;
+      }
+  }
+  @media (max-width: 767px) {
+    .card {
+     margin: 0px auto;
+      }
+  }

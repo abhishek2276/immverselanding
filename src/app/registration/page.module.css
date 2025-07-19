@@ -1,0 +1,727 @@
+.container {
+    min-height: 100vh;
+    background-color: white;
+    padding-top: 100px;
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+  
+.header {
+  background-image: url('/registration/regi1.svg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+  }
+  
+  .description {
+    font-size:20px;
+    opacity: 0.9;
+    max-width: fit-content;
+    font-weight: 400;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .mainContent {
+    display: grid;
+    grid-template-columns: 5fr 7fr; /* Left: 5 parts, Right: 7 parts */
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  .leftSection {
+    background: white;
+    border-radius: 1rem;
+    height: fit-content;
+  }
+  
+  .rightSection {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: fit-content;
+    border: 1px solid #E2E8F0;
+  }
+  
+  .tabNavigation {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+   
+    padding: 0.25rem;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: #F4F4F5;
+    color: #64748b;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    font-size: 14px;
+  }
+  
+
+  
+  .tabActive {
+    background: linear-gradient(to right , #4A38D9,#D71D89,#FFA209);
+    color: white;
+    box-shadow: 0 2px 4px rgba(233, 30, 99, 0.2);
+  }
+  
+  .eventsSection {
+    margin-top: 1rem;
+  }
+  
+  .eventsTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .eventCard {
+    background-image: url('/registration/regi2.svg'); /* Replace with your actual image path */
+    background-size: fit;
+    background-position: center;
+    background-repeat: no-repeat;
+  width: 530px;
+  height: 108px;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #fff; /* Make text visible on dark images */
+  }
+  
+  .eventCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .eventCard:nth-child(3) {
+    background-image: url('/registration/regi3.svg');
+  }
+  
+  .eventCard:nth-child(4) {
+    background-image: url('/registration/regi4.svg');
+    color: black;
+  }
+  
+  .eventCardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .eventCardLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+  
+  .eventImage {
+    border-radius: 0.5rem;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .eventOverlay {
+    color: white;
+  }
+  
+  .eventCardTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .eventDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.95;
+  }
+  
+  .eventLocation,
+  .eventTime {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .activeLabel {
+    background: #FFFFFF33;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #FFFFFF4D;
+    backdrop-filter: blur(10px);
+  }
+  
+  .comingSoonLabel {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #FFFFFF4D;
+    backdrop-filter: blur(10px);
+  }
+  
+  .formContainer {
+    width: 100%;
+  }
+  
+  .formTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+text-align: center;
+  }
+  
+  .formSubtitle {
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #09090B;
+    font-size: 14px;
+  }
+  
+  .input,
+  .select {
+    padding: 0.75rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+  }
+  
+
+  .phoneRow {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* Allow wrapping */
+    align-items: flex-start;
+  }
+  
+  .phoneCode {
+    width: 80px;
+    padding: 0.75rem 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    background: white;
+    color: #64748B;
+  }
+  
+  .phoneInput {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    max-width: 230px;
+  }
+  
+  .sendOtpBtn {
+    background: #E2E8F0;
+    color: #6F6D78;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 14px;
+  }
+
+  .otpRow {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .otpInput {
+    width: 100px;
+    padding: 0.65rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    letter-spacing: 0.25rem;
+    background-color: #FBFAFF;
+  }
+  
+  .verifyOtpBtn {
+    background:#E2E8F0;
+    color: #6F6D78;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 14px;
+  }
+  
+  .verifyOtpBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+  }
+  
+  .resendOtp {
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+  }
+  
+  .submitBtn {
+    background: linear-gradient(135deg, #4A38D9, #D71D89,#FFA209);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 1rem;
+  min-width: 165px;
+   margin: 0px auto;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+  }
+
+  /* Tablet View */
+  @media (max-width: 768px) {
+    .mainContent {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .header {
+        background-image: url('/registration/regi1.svg'); /* Replace with your actual image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 1rem;
+    
+       
+        
+      }
+      
+  
+    .title {
+      font-size: 36px;
+    }
+   
+    .formRow {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .phoneRow {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .phoneCode {
+      width: 100%;
+    }
+  
+    .otpRow {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 1rem;
+    }
+  
+    .otpInput {
+      width: 100%;
+    }
+    .leftSection {
+        background: white;
+        border-radius: 1rem;
+        height: fit-content;
+        order: 2;
+      }
+      .rightSection {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        max-width: 656px;
+        width: 100%; /* ✅ This ensures it expands properly */
+        height: fit-content;
+        border: 1px solid #E2E8F0;
+        margin: 0 auto; /* Center horizontally */
+      }
+      
+ 
+      
+      .formSubtitle {
+        color: #64748b;
+        margin-bottom: 2rem;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    
+      }
+      
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .formRow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .formGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+    
+    
+      .phoneRow {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: row;
+      }
+      
+      .phoneCode {
+        width: 80px;
+        padding: 0.75rem 0.5rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 14px;
+        background: white;
+        color: #64748B;
+      }
+      
+      .phoneInput {
+        flex: 1;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        max-width: 230px;
+      }
+      
+      .sendOtpBtn {
+        background: #E2E8F0;
+        color: #6F6D78;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-size:14px;
+      }
+      
+    
+      .otpRow {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      
+      .otpInput {
+        width: 100px;
+        padding: 0.65rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-size: 1.125rem;
+        letter-spacing: 0.25rem;
+        background-color: #FBFAFF;
+      }
+      
+      .verifyOtpBtn {
+        background:#E2E8F0;
+        color: #6F6D78;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-size: 14px;
+      }
+      
+      .verifyOtpBtn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+      }
+      
+      .resendOtp {
+        color: #64748b;
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+      .eventCard {
+        background-image: url('/registration/regi2.svg'); /* Replace with your actual image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      width: 720px;
+      height: 108px;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        color: #fff; /* Make text visible on dark images */
+      }
+      
+      
+  }
+  
+  /* Mobile View */
+  @media (max-width: 700px) {
+    .container {
+  
+   
+        margin: 0 auto;
+      }
+    .header {
+        background-image: url('/registration/regi1.svg'); /* Replace with your actual image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        max-width: 361px;
+        max-height: 427px;
+        border-radius: 1rem;
+        margin: 0px auto;
+        align-items: center;
+        justify-content: center;
+      }
+      
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .description {
+      font-size: 0.875rem;
+    }
+  
+    .mainContent {
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+  
+    .leftSection
+    {
+    
+      max-width: 361px;
+      margin: 0px auto;
+    }
+    .rightSection {
+        padding: 1rem;
+        max-width: 361px;
+        margin: 0px auto;
+      }
+  
+    .tabNavigation {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0.5rem;
+     
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  
+    .tab:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  
+    .tab:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  
+    .tab:nth-child(3) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+  
+    .tab {
+      
+      font-size: 0.75rem;
+    }
+  
+    .eventCard {
+      max-width: 358px;
+    }
+  
+    .eventCardLeft {
+      gap: 0.75rem;
+    }
+  
+    .eventImage {
+      width: 60px;
+      height: 45px;
+    }
+  
+    .eventCardTitle {
+      font-size: 0.875rem;
+    }
+  
+    .eventDetails {
+      font-size: 0.75rem;
+    }
+  
+    .activeLabel,
+    .comingSoonLabel {
+      font-size: 0.625rem;
+      padding: 0.25rem 0.5rem;
+    }
+  
+    .formTitle {
+      font-size: 1.25rem;
+    }
+  
+    .input,
+    .select {
+      padding: 0.625rem;
+      font-size: 0.8rem;
+    }
+  
+    .sendOtpBtn,
+    .verifyOtpBtn {
+      padding: 0.625rem 0.75rem;
+      font-size: 0.75rem;
+    }
+  
+    .submitBtn {
+      padding: 0.875rem 1.5rem;
+      font-size: 0.875rem;
+    }
+    .formRow {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+      }
+      .sendOtpBtn {
+        width: 40%;
+        margin: 0px auto;
+        margin-top: 0.5rem;
+      }
+  }
+  
+  /* Additional responsive adjustments */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .tab {
+      font-size: 0.7rem;
+      padding: 0.4rem;
+    }
+  
+    .eventCardTitle {
+      font-size: 0.8rem;
+    }
+    .formRow {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+      }
+      .phoneInput {
+        flex: 1;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        max-width: 256px;
+      }
+  }

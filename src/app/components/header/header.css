@@ -1,0 +1,292 @@
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+max-width: 1260px;
+    /* ✅ FIX: Added !important to force this background color */
+    background-color: #F4F4F41A !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.4s ease-in-out;
+    will-change: backdrop-filter, transform, opacity;
+    transform: translateZ(0);
+}
+
+.custom-navbar.scrolled {
+    /* ✅ FIX: Added !important here as well for the scrolled state */
+    background-color: rgba(126, 116, 116, 0.06) !important;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar.navbar-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    pointer-events: none;
+    transition:
+      transform 0.5s ease-out,
+      opacity 0.4s ease-out;
+}
+
+.nav-item-link {
+    color: black !important;
+    margin: 0 0.2rem !important;
+    font-weight: 400;
+    transition: color 0.3s;
+    padding: 0.5rem 0.8rem !important;
+    align-items: center;
+}
+
+.nav-item-link:hover {
+    color: black !important;
+}
+
+.nav-item-link.active {
+    background: linear-gradient(to right, #4A38D9 , #D71D89, #FFA209);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700 !important;
+}
+
+
+/* --- Mobile Sidebar --- */
+.sidebar-container {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    bottom: 100px;
+    left: 100px;
+    pointer-events: none;
+    width: 70vw;
+    max-width: 320px;
+    height: fit-content;
+    z-index: 1050;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.4);
+    background-color: #f4f4f40e !important;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    transform: translateY(-180px);
+    transition:
+        transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-container.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 25px 10px 25px;
+    width: 100%;
+}
+  
+.close-btn {
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    font-size: 2.0rem;
+    transition: color 0.3s;
+    cursor: pointer;
+    font-weight: 400px;
+}
+  
+.close-btn:hover {
+    color: #ffffff;
+}
+
+.main-nav {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+
+.main-nav > .nav-link {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+}
+
+.main-nav > .nav-link:hover {
+    color: black;
+}
+
+.main-nav > .nav-link.active {
+    background: linear-gradient(to right, #4A38D9 , #D71D89, #FFA209);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700 !important;
+}
+
+
+.sidebar-buttons {
+    margin-top: auto;
+    padding-top: 1.6rem;
+    width: 100%;
+}
+
+.sidebar-buttons .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.navbar-toggler-icon {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    color: white;
+    font-weight: bold;
+
+    height: 55px;
+    width: 119px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    background: linear-gradient(to right, #4A38D9 , #D71D89, #FFA209);
+    background-clip: padding-box; 
+
+  }
+  
+  .signup {
+    height: 55px;
+    width: 119px;
+    background-color: #F4F4F5;
+    border: none;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+text-align: center;
+    align-items: center; 
+    gap: 0.1rem;          
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+  
+
+.signup:hover {
+    height: 55px;
+    width: 119px;
+    background-color: #F4F4F5;
+    border: none;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+text-align: center;
+    align-items: center; 
+    gap: 0.1rem;          
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.login:hover {
+    color: white;
+    font-weight: bold;
+    height: 55px;
+    width: 119px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    background: linear-gradient(to right, #4A38D9 , #D71D89, #FFA209);
+    background-clip: padding-box; 
+}
+@media (max-width: 768px) {
+    .custom-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        width: 95%;
+        margin: 1rem auto;
+        padding: 0.7rem 0.1rem;
+        border-radius: 50px;
+    max-width: 1260px;
+        /* ✅ FIX: Added !important to force this background color */
+        background-color: #F4F4F41A !important;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+    
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    
+        transition: all 0.4s ease-in-out;
+        will-change: backdrop-filter, transform, opacity;
+        transform: translateZ(0);
+    }
+    .nav-item-link {
+        color: black !important;
+        margin: 0 0.2rem !important;
+        font-weight: 400;
+        font-size: 11px;
+        transition: color 0.3s;
+        padding: 0.5rem 0.2rem !important;
+        align-items: center;
+    }
+    .login {
+        color: white;
+        font-weight: bold;
+    
+        height: 46px;
+        width: 94px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        border: none;
+        background: linear-gradient(to right, #4A38D9 , #D71D89, #FFA209);
+        background-clip: padding-box; 
+    
+      }
+      
+      .signup {
+        height: 46px;
+        width: 94px;
+        background-color: #F4F4F5;
+        border: none;
+        color: black;
+        font-weight: 700;
+        font-size: 14px;
+    text-align: center;
+        align-items: center; 
+        gap: rem;          
+        border-radius: 25px;
+        transition: background-color 0.3s;
+      }
+      
+}
