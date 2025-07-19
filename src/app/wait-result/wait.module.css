@@ -1,0 +1,280 @@
+.container {
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 100px;
+    max-width: 1260px;
+    margin: 0px auto;
+  }
+  
+  /* Back Button */
+  .backButton {
+    position: absolute;
+    top: 8rem;
+    left: 0rem;
+    background-color: #F4F4F5;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  
+
+  /* Main Content */
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+  
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #27272A; /* Removed gradient, using solid color */
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 30px;
+    font-weight: 700;
+    color: #27272A; /* Removed gradient, using solid color */
+    margin-bottom: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0;
+  }
+  
+  /* Countdown Container */
+  .countdownContainer {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .timeBox {
+    position: relative;
+    background: linear-gradient(139deg, #696eff, #f8acff3a, #fec1513b);
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    min-width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 8px 24px rgba(74, 56, 217, 0.2);
+    transition: transform 0.2s ease;
+  
+    /* Gradient border trick */
+    background: 
+      linear-gradient(139deg, #696eff49, #f8acff3a, #fec1513b) padding-box,
+      linear-gradient(139deg,  #696eff49, #f8acff3a, #fec1513b) border-box;
+    border: 2px solid transparent;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  
+  
+  .gradientUnified {
+    font-weight: 700;
+    background: linear-gradient(to right, #4A38D9, #D71D89, #FFA209);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Different positions in the gradient stream */
+  .gradientUnified[data-index="0"] {
+    background-position: 0% 50%;
+  }
+  .gradientUnified[data-index="1"] {
+    background-position: 50% 50%;
+  }
+  .gradientUnified[data-index="2"] {
+    background-position: 100% 50%;
+  }
+  
+  .timeNumber {
+    font-size: 49px;
+
+    font-weight: 700;
+  }
+  
+  .timeLabel {
+    font-size: 28px;
+    font-weight: 600;
+    opacity: 0.9;
+    text-transform: capitalize;
+  }
+  
+  
+  /* Button Container */
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .viewResultButton {
+    background: linear-gradient(135deg, #4A38D9, #D71D89, #FFA209);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(74, 56, 217, 0.3);
+  }
+  
+  .viewResultButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(74, 56, 217, 0.4);
+  }
+  
+  /* Tablet View */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+      max-width: 729px;
+    }
+  
+    .backButton {
+      top: 7rem;
+     
+      padding: 0.625rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+      padding-top: 100px;
+    }
+  
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .countdownContainer {
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+  
+    .timeBox {
+      padding: 1.5rem 1.25rem;
+      min-width: 210px;
+    }
+  
+  
+    .viewResultButton {
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 640px) {
+    .container {
+        min-height: 60vh;
+        background-color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        padding-top: 100px;
+        max-width: 1260px;
+        margin: 0px auto;
+      }
+  
+    .backButton {
+      top: 7rem;
+      left: 1rem;
+      padding: 0.5rem;
+    }
+  
+    .header {
+      margin-bottom: 2rem;
+ 
+    }
+  
+  
+  
+    .description {
+      font-size: 0.875rem;
+    }
+  
+    .countdownContainer {
+      gap: 1rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+  
+    .timeBox {
+    
+      min-width: 110px;
+    }
+  
+    .timeNumber {
+      font-size: 2rem;
+    }
+  
+    .timeLabel {
+      font-size: 0.875rem;
+    }
+  
+    .viewResultButton {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Extra Small Mobile */
+  @media (max-width: 480px) {
+    .countdownContainer {
+      flex-direction: row;
+   
+    }
+  
+    .timeBox {
+   
+      max-width: 100px;
+      padding: 1rem;
+    }
+  
+
+  
+    .subtitle {
+    margin-top: 30px;
+    }
+  }

@@ -218,7 +218,7 @@
 }
 
 .accessCodeSection {
-  margin-bottom: 2rem;
+margin-bottom: 2rem;
 align-items: center;
 justify-self:center;
 }
@@ -229,6 +229,7 @@ justify-self:center;
   font-size: 14px;
   display: block;
   margin-bottom: 0.5rem;
+  margin-left: 30px
 }
 
 .accessInputRow {
@@ -248,7 +249,6 @@ justify-self:center;
 }
 
 .requestCodeBtn {
-
   color: #64748BB2;
   padding: 0.75rem 1rem;
   border: none;
@@ -406,17 +406,25 @@ justify-self:center;
   box-shadow: 0 4px 12px rgba(74, 56, 217, 0.3);
 }
 
-/* Quiz Rules Section */
+/* Quiz Rules Section - Desktop */
 .quizRulesSection {
   background: white;
   border-radius: 8px;
   margin: 2rem 1rem;
   padding: 2rem;
-
-  /* ✅ Box shadow added */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: block;
 }
 
+/* Quiz Rules Section - Mobile/Tablet */
+.quizRulesSectionMobile {
+  background: white;
+  border-radius: 8px;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: none;
+}
 
 .quizRulesContainer {
   max-width: 800px;
@@ -491,8 +499,8 @@ justify-self:center;
   }
 
   .quizContentGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: 3fr 6fr;
+    gap: 0.1rem;
   }
 
   .quizInfoColumn {
@@ -511,7 +519,20 @@ justify-self:center;
   .accessInput {
     min-width: auto;
   }
-
+  .accessLabel {
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align:center;
+  }
+  
+  .quizRulesSectionMobile {
+    display: block;
+    order: 2;
+  }
+  
   .eventCard {
     width: 720px;
     height: 108px;
@@ -519,18 +540,22 @@ justify-self:center;
   }
 
   .questionTypesTags {
-    justify-content: center;
+    justify-content: left;
   }
+
+  /* Hide desktop quiz rules, show mobile quiz rules */
   .quizRulesSection {
+    display: none;
+  }
+
+  .quizRulesSectionMobile {
+    display: block;
     background: white;
     border-radius: 8px;
     margin: 2rem 1rem;
     padding: 2rem;
-  order: 2;
-    /* ✅ Box shadow added */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
-  
 }
 
 /* Mobile View */
@@ -565,7 +590,7 @@ justify-self:center;
   .leftSection {
     max-width: 361px;
     margin: 0px auto;
-    order: 2;
+    order: 3;
   }
 
   .rightSection {
@@ -655,7 +680,9 @@ justify-self:center;
     font-size: 16px;
   }
 
-  .quizRulesSection {
+  .quizRulesSectionMobile {
+    display: block;
+    order: 2;
     margin: 1rem 0.5rem;
     padding: 1.5rem;
   }
@@ -663,9 +690,63 @@ justify-self:center;
   .quizRulesTitle {
     font-size: 20px;
   }
+
+  /* Hide desktop quiz rules, show mobile quiz rules */
+  .quizRulesSection {
+    display: none;
+  }
+
+  .quizRulesSectionMobile {
+    display: block;
+    margin: 1rem 0.5rem;
+    padding: 1.5rem;
+  }
+  .accessInput {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    min-width: 280px;
+  }
+  .quizInfoContent {
+    flex: 1;
+  }
+  
+.questionTypesTags {
+  display: grid;
+  gap: 0.2rem;
+grid-template-columns: 1fr 1fr 1fr;
+}
+.questionTypeTag {
+  background: #1F2937;
+  color: white;
+  padding: 0.5rem 0.4rem;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+.quizInfoCard {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  min-width: 153px;
+
+}
+.tabNavigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+}
 }
 
-/* Additional responsive adjustments */
+
 @media (max-width: 480px) {
   .title {
     font-size: 1.25rem;
@@ -681,15 +762,50 @@ justify-self:center;
   }
 
   .quizContentGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr ;
   }
 
   .quizInfoColumn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   .quizInfoColumn .quizInfoCard:nth-child(3) {
     grid-column: 1;
+  }
+  .quizRulesList {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 450px;
+  
+    /* ✅ Center the entire list block */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .quizRulesList li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    text-align: left;
+  }
+  
+  .quizRulesList li::before {
+    content: "•";
+    color: #8B5CF6;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
   }
 }

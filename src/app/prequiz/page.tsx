@@ -27,6 +27,23 @@ export default function Home() {
 
       {/* Main Content */}
       <div className={styles.mainContent}>
+        {/* Quiz Rules Section - Mobile/Tablet (Between Right and Left sections) */}
+        <div className={styles.quizRulesSectionMobile}>
+          <div className={styles.quizRulesContainer}>
+            <h2 className={styles.quizRulesTitle}>Quiz Rules</h2>
+            <p className={styles.quizRulesSubtitle}>A sub text about Quiz rules and regulations</p>
+            
+            <ul className={styles.quizRulesList}>
+              <li>No use of unauthorized devices or apps during the quiz.</li>
+              <li>Keep your camera and microphone on if proctoring is enabled.</li>
+              <li>Do not switch tabs or windows; stay on the quiz page only.</li>
+              <li>No communication with others during the quiz.</li>
+              <li>Avoid using phones or secondary screens unless allowed.</li>
+              <li>Follow all instructions given by the proctor or exam system.</li>
+            </ul>
+          </div>
+        </div>
+
         {/* Left Section - Events */}
         <div className={styles.leftSection}>
           {/* Tab Navigation */}
@@ -185,7 +202,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Quiz Rules Section */}
+      {/* Quiz Rules Section - Desktop */}
       <div className={styles.quizRulesSection}>
         <div className={styles.quizRulesContainer}>
           <h2 className={styles.quizRulesTitle}>Quiz Rules</h2>

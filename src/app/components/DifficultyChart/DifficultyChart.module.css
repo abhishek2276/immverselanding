@@ -1,0 +1,23 @@
+.chartContainer {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px 28px;
+
+    margin: 0 auto;
+
+  }
+  
+  .heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  
+  .subheading {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
